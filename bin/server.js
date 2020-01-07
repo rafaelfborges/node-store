@@ -1,4 +1,5 @@
-'use strict'
+require('dotenv').config();
+'use strict';
 
 const app = require('../src/app');
 const debug = require('debug')('nodestr:server');
