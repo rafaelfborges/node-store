@@ -15,7 +15,8 @@ mongoose.connect(process.env.MONGO_URL_CONNECTION, {
 
 //Carrega os Models
 const Product = require('./models/Product');
-const Customer = require("./models//Customer");
+const Customer = require("./models/Customer");
+const Order = require("./models/Order");
 
 //Carrega as rotas
 const indexRoute = require('./routes/IndexRoute');
