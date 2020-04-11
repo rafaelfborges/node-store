@@ -6,7 +6,6 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 
 const app = express();
-const router = express.Router();
 
 //Conecta ao banco
 mongoose.connect(process.env.MONGO_URL_CONNECTION, {
@@ -14,9 +13,12 @@ mongoose.connect(process.env.MONGO_URL_CONNECTION, {
   useUnifiedTopology: true
 });
 
+//Carrega os Models
+const Product = require('./models/Product');
+
 //Carrega as rotas
-const indexRoute = require('./routes/index-route');
-const productRoute = require('./routes/product-route');
+const indexRoute = require('./routes/IndexRoute');
+const productRoute = require('./routes/ProductRoute');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
