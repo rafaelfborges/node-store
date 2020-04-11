@@ -1,14 +1,14 @@
-require('dotenv').config()
 'use strict';
 
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+const config = require('./config');
 
 const app = express();
 
 //Conecta ao banco
-mongoose.connect(process.env.MONGO_URL_CONNECTION, {
+mongoose.connect(config.connectionString, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
