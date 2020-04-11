@@ -1,10 +1,15 @@
 'use strict';
 
 const repository = require("../repositories/CustomerRepository");
+const md5 = require("md5");
 
 exports.post = async (req, res, next) => {
   try {
-    await repository.create(req.body);
+    await repository.create({
+      name: req.body.name,
+      email: req.body.email,
+      password: md5(req.body.password + global.SALT_KEY)
+    });
     res.status(201).send({
       message: "Cliente cadastrado com sucesso!"
     });
