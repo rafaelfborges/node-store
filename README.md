@@ -1,7 +1,17 @@
 # Node Store
 
-Simples API desenvolvida no curso [Criando API com Node](https://app.balta.io/courses/1972) do [Andre Baltiere](https://balta.io). 
+Simples API desenvolvida no curso [Criando API com Node](https://app.balta.io/courses/1972) do [Andre Baltiere](https://balta.io).
 
+## Instalação
+```sh
+$ cp .env.example .env
+$ yarn install or npm install
+```
+
+## Uso
+```sh
+$ yarn start or npm start
+```
 ## Conteúdo programático
 
 ###### Introdução e Configuração
